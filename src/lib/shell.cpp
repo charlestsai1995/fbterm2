@@ -81,8 +81,8 @@ void Shell::createShellProcess(s8 **command)
 
 	case 0:  // child process
 		initShellProcess();
-+		Config::instance()->getOption("term", term, sizeof(term));
-+		setenv("TERM", term, 1);
+		Config::instance()->getOption("term", term, sizeof(term));
+		setenv("TERM", term, 1);
 
 		if (command) {
 			execvp(command[0], command);
