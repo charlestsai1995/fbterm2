@@ -15,4 +15,4 @@ FbTerm is a fast terminal emulator for linux with frame buffer device or VESA vi
   * lightweight input method framework with client-server architecture
   * background image for eye candy
 
-read man page [doc/fbterm.1](doc/fbterm.1) for usage help.
+read man page [doc/fbterm.1.in](doc/fbterm.1.in) for usage help.
