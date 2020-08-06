@@ -223,6 +223,9 @@ void Config::checkConfigFile(const s8 *name)
 		"\n"
 		"# treat ambiguous width characters as wide\n"
 		"#ambiguous-wide=yes\n"
+		"\n"
+		"# set $TERM\n"
+		"#term=linux\n"
 		;
 
 	struct stat cstat;
@@ -253,6 +256,7 @@ bool Config::parseArgs(s32 argc, s8 **argv)
 		{ "font-width", required_argument, 0, 2 },
 		{ "font-height", required_argument, 0, 4 },
 		{ "ambiguous-wide", no_argument, 0, 'a' },
+		{ "term", required_argument, 0, 5 },
 #ifdef ENABLE_VESA
 		{ "vesa-mode", required_argument, 0, 3 },
 #endif
@@ -287,6 +291,7 @@ bool Config::parseArgs(s32 argc, s8 **argv)
 				"  -i, --input-method=TEXT         specify input method program\n"
 				"      --cursor-shape=NUM          specify default cursor shape\n"
 				"      --cursor-interval=NUM       specify cursor flash interval\n"
+				"      --term=TEXT                 specify the `TERM' environment variable\n"
 #ifdef ENABLE_VESA
 				"      --vesa-mode=NUM             force VESA video mode\n"
 				"                  list            display available VESA video modes\n"

@@ -174,7 +174,8 @@ so private escape sequences were introduced to support this feature:
 \fR
 
 A new terminfo database entry named "fbterm" was added to use these private sequences, all program based on terminfo should work with it.
-By default, FbTerm sets environment variable "TERM" to value "fbterm". Alternatively, the "TERM" variable can be set to "linux",
+By default, FbTerm sets environment variable "TERM" to value "linux",
+user need set the `term' variable (in fbtermrc or with the `--term' option) to "fbterm" to enable 256 color mode.
 in which case the 256 color mode will be unavailable.
 .SH "INPUT METHOD"
 Instead of adding input method directly in FbTerm, a client-server based input method framework is designed to do
