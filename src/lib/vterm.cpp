@@ -68,7 +68,7 @@ u8 VTerm::control_map[MAX_CONTROL_CODE], VTerm::escape_map[NR_STATES][MAX_ESCAPE
 
 void VTerm::init_state()
 {
-	for (u8 i = 1; control_sequences[i].code != (u16)-1; i++) {
+	for (u8 i = 1; control_sequences[i].code != 0xFFFF; i++) {
 		control_map[control_sequences[i].code] = i;
 	}
 
