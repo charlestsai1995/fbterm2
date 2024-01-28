@@ -44,7 +44,7 @@ FbDev *FbDev::initFbDev()
 	if (fbdev) {
 		fbdev_fd = open(fbdev, O_RDWR);
 	} else {
-		fbdev_fd = open("/dev/fb0", O_RDWR);
+		fbdev_fd = open("/dev/fb1", O_RDWR);
 		if (fbdev_fd < 0) fbdev_fd = open("/dev/fb/0", O_RDWR);
 	}
 
